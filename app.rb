@@ -23,6 +23,16 @@ class Battle < Sinatra::Base
   get '/test' do
     'Testing123'
   end
+
+
+  get '/attack' do
+    @player_one_name = session[:player_one_name]
+    @player_two_name = session[:player_two_name]
+    erb :attack
+  end
+
+    set :session_secret, "thing"
   # start the server if ruby file executed directly
   run! if app_file == $PROGRAM_NAME
- end
+
+end
