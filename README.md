@@ -1,4 +1,15 @@
+BATTLE
+==================
 
+#### *A basic web app game*
+
+___••Installation instructions••___
+- Bullet point how to install dependancies to the run the program
+    ```bash
+    ```
+
+## User-spec fulfilment
+```ruby
 # As two Players,
 # So we can play a personalised game of Battle,
 # We want to Start a fight by entering our Names and seeing them
@@ -42,3 +53,11 @@ end
 # As a Player,
 # So I can Lose a game of Battle,
 # I want to see a 'Lose' message if I reach 0HP first
+```
+
+## How to use
+
+__**IRB**__
+```ruby
+#Paste a basic usage outline from IRB here
+```
