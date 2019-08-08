@@ -1,12 +1,10 @@
 
 
 <h1><center>FIGHT!</center></h1>
-<h1><center><%= @player_1.name.upcase %> vs <%= @player_2.name.upcase %></center></h1>
-<body bgcolor="#E6E6FA">
+<h1><center><%= @game.player_1.name.upcase %> vs <%= @game.player_2.name.upcase %></center></h1>
+<body bgcolor="green">
 
-<h3><center><%= @player_1.name.capitalize %>: <%= @player_1.hit_points %>HP</center></h3>
-<h3><center><%= @player_2.name.capitalize %>: <%= @player_2.hit_points %>HP</center></h3>
+<h3><center><%= @game.player_1.name.capitalize %>: <%= @game.player_1.hit_points %>HP</center></h3>
+<h3><center><%= @game.player_2.name.capitalize %>: <%= @game.player_2.hit_points %>HP</center></h3>
 
 <center><a href="/attack">Attack</a></center>
-
-<img src="https://banner2.kisspng.com/20180406/dwq/kisspng-mortal-kombat-mythologies-sub-zero-mortal-kombat-mortal-kombat-5ac82b472d9f61.0560527915230677191869.jpg" width="1000" height="1000">

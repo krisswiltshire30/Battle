@@ -20,6 +20,8 @@ describe Player do
       it 'damages the player' do
         expect(mittens).to receive(:receive_damage)
         dave.attack(mittens)
+
+
       end
     end
 
