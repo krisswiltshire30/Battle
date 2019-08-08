@@ -1,6 +1,10 @@
 require 'sinatra/base'
+# require 'sinatra/reloader'
+require './lib/player.rb'
 
 class Battle < Sinatra::Base
+  enable :sessions
+  # register Sinatra::Reloader
 
   get '/' do
     erb :index
@@ -12,12 +16,6 @@ class Battle < Sinatra::Base
     redirect '/play'
   end
 
-  get '/play' do
-    @player_one_name = $player1.name
-    @player_two_name = $player2.name
-    erb :play
-  end
-
   get '/attack' do
     @player_1 = $player1
     @player_2 = $player2
@@ -25,7 +23,14 @@ class Battle < Sinatra::Base
     erb :attack
   end
 
+  get '/play' do
+    @player_1 = $player1
+    @player_2 = $player2
+    @player_one_name = $player1.name
+    @player_two_name = $player2.name
+    erb :play
+  end
   # start the server if ruby file executed directly
   run! if app_file == $PROGRAM_NAME
-
+  set :session_secret, "here be dragons"
 end

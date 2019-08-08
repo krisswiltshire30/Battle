@@ -1,7 +1,8 @@
-<%= @player_1.name %> vs. <%= @player_2.name %>
+<h1>FIGHT!</h1>
+<h1><%= @player_1.name.upcase %> vs <%= @player_2.name.upcase %></h1>
 
-<%= @player_1.name %>: <%= @player_2.hit_points %>HP
 
-<form action="/attack">
-  <input type="submit" value="attack">
-</form>
+<h3><%= @player_1.name %>: <%= @player_1.hit_points %>HP</h3>
+<h3><%= @player_2.name %>: <%= @player_2.hit_points %>HP</h3>
+
+<a href="/attack">Attack</a>

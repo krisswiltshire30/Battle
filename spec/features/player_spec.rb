@@ -1,4 +1,4 @@
-require './player'
+require './lib/player.rb'
 
 describe Player do
   subject(:dave) { Player.new('dave') }
@@ -9,13 +9,12 @@ describe Player do
         expect(dave.name).to eq 'dave'
       end
     end
-  
+
     describe '#hit_points' do
       it 'returns the hit points' do
         expect(dave.hit_points).to eq described_class::DEFAULT_HIT_POINTS
       end
     end
-
 
     describe '#attack' do
       it 'damages the player' do
@@ -23,7 +22,7 @@ describe Player do
         dave.attack(mittens)
       end
     end
-    
+
     describe '#receive_damage' do
       it 'reduces the player hit points' do
         expect { dave.receive_damage }.to change { dave.hit_points }.by(-10)

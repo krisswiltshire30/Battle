@@ -5,7 +5,7 @@
 feature 'Enter names' do
   scenario 'Can input player names' do
     sign_in_and_play
-    expect(page).to have_content 'Raiden vs Goro'
+    expect(page).to have_content 'RAIDEN vs GORO'
   end
 end
 # As Player 1,
