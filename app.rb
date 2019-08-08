@@ -1,6 +1,7 @@
 require 'sinatra/base'
 # require 'sinatra/reloader'
 require './lib/player.rb'
+require './lib/game.rb'
 
 class Battle < Sinatra::Base
   enable :sessions
@@ -19,7 +20,7 @@ class Battle < Sinatra::Base
   get '/attack' do
     @player_1 = $player1
     @player_2 = $player2
-    @player_1.attack(@player_2)
+    Game.new.attack(@player_2)
     erb :attack
   end
 
